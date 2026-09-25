@@ -1,11 +1,10 @@
 # GoldenHive — Architecture
 
-Case study of an online-bank-style wealth management platform: accounts,
-payment cards, investments and KYC. Freelance work for a client, sole
-developer.
+Case study of a fintech platform: accounts, payment cards, investments and
+KYC. Freelance work for a client, sole developer.
 
-**Live:** [www.goldenhive.io](https://www.goldenhive.io)
-**Role:** sole developer — November 2024 to May 2026, 210 commits
+**Live:** [www.goldenhive.io](https://www.goldenhive.io)\
+**Role:** sole developer — November 2024 to May 2026, 210 commits\
 **Size:** 13 Django apps, ~27,000 lines of Python, 237 templates, 5 languages
 
 > **No source code here.** The repository belongs to the client and stays
@@ -13,8 +12,8 @@ developer.
 
 ## The problem
 
-A wealth management firm needed its clients to hold an account, receive a
-payment card, subscribe to investment products and follow their returns — in
+A fintech client needed its customers to hold an account, receive a payment
+card, subscribe to investment products and follow their returns — in
 five languages, with the identity checks that come with handling other
 people's money.
 
@@ -77,6 +76,19 @@ trail through django-easy-audit.
 | MFA through django-allauth rather than a custom implementation | Authentication is the wrong place to be original | Bound to the library's upgrade path |
 | Audit logging at the ORM level (django-easy-audit) | Nothing escapes it, including admin actions | Write volume grows; the table needs a retention policy |
 | AWS first, then Railway | Early architecture favoured flexibility; once the shape was stable, hosting cost mattered more | A migration nobody budgeted for |
+
+## Screens
+
+Demo account, demo data.
+
+| | |
+|---|---|
+| ![Investment dashboard](docs/01-investments.png) | ![Capital distribution and positions](docs/01-investments-1.png) |
+| Investment dashboard | Capital distribution and positions |
+| ![Investment catalog](docs/04-investments-available-list.png) | ![Product detail](docs/05-investments-available-details.png) |
+| Investment catalog | Product detail |
+| ![Account settings](docs/03-account.png) | |
+| Account and identity settings | |
 
 ## Operations
 
